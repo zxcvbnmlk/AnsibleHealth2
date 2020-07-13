@@ -14,14 +14,25 @@ import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
 import {NotFoundComponent} from "@app/not-found";
+import { GridModule } from '@progress/kendo-angular-grid';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ChartsModule } from '@progress/kendo-angular-charts';
+
+import 'hammerjs';
+
 
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        appRoutingModule
-    ],
+        appRoutingModule,
+        GridModule
+,
+        BrowserAnimationsModule ,
+        ChartsModule   ],
     declarations: [
         AppComponent,
         HomeComponent,
