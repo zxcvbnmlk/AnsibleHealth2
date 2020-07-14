@@ -22,15 +22,25 @@
         </kendo-chart-category-axis-item-labels>
       </kendo-chart-category-axis-item>
     </kendo-chart-category-axis>
+
     <kendo-chart-series>
-      <kendo-chart-series-item  [data]="seriesData"  type="line"
-                                [labels]="seriesLabels" >
+      <kendo-chart-series-item  [data]="seriesData"  type="line">
         <kendo-chart-series-item-labels [visual]="labelVisual">
         </kendo-chart-series-item-labels>
 <!--        <kendo-chart-series-item-labels [content]="labelContent">-->
 <!--        </kendo-chart-series-item-labels>-->
       </kendo-chart-series-item>
     </kendo-chart-series>
+
+<!--    <kendo-chart-legend position="bottom" orientation="horizontal">-->
+<!--      <kendo-chart-legend-item [visual]="labelsVisual" [cursor]="'pointer'">-->
+<!--      </kendo-chart-legend-item>-->
+<!--    </kendo-chart-legend>-->
+
+<!--    <kendo-chart-series>-->
+<!--      <kendo-chart-series-item *ngFor="let series of data" [type]="series.type" [name]="series.name" [dashType]="series.dashType" [data]="series.data">-->
+<!--      </kendo-chart-series-item>-->
+<!--    </kendo-chart-series>-->
   </kendo-chart>
 
 
