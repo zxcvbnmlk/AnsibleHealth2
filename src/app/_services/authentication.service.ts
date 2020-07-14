@@ -22,20 +22,21 @@ export class AuthenticationService {
     login(username: string, password: string) {
       const data: string = 'username=' + username + '&password=' + password + '&grant_type=password';
       const reqHeader = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
-       return this.http.post<any>(`${environment.apiBaseUrl}Token`, data, { headers: reqHeader })
-      // return this.http.post<any>(`${environment.apiUrl}/users/authenticate`, { username, password })
+      // Todo for api auth
+       // return this.http.post<any>(`${environment.apiBaseUrl}Token`, data, { headers: reqHeader })
+      return this.http.post<any>(`${environment.apiUrl}/users/authenticate`, { username, password })
         .pipe(map(user => {
                 // login successful if there's a jwt token in the response
-              console.log('user', user);
-                user = {
-                  firstName: "Normal",
-                  id: 2,
-                  lastName: "User",
-                  role: "User",
-                  token: "fake-jwt-token.2",
-                  username: "user",
-
-                }
+              // console.log('user', user);
+              //   user = {
+              //     firstName: "Normal",
+              //     id: 2,
+              //     lastName: "User",
+              //     role: "User",
+              //     token: "fake-jwt-token.2",
+              //     username: "user",
+              //
+              //   }
                //if (user && user.access_token) {
                   if (user && user.token) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
